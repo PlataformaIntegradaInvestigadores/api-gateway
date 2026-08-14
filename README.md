@@ -8,7 +8,7 @@ Gateway central (nginx) que enruta `/api`, `/ws` y `/media` a los backends de la
 docker compose up -d --build
 ```
 
-Healthcheck: `curl -f http://localhost:8080/`
+Healthcheck: `curl -f http://localhost:8080/health`
 
 ## Rutas (ver `nginx.conf`)
 
