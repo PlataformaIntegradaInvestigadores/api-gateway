@@ -12,13 +12,16 @@ Healthcheck: `curl -f http://localhost:8080/health`
 
 ## Rutas (ver `nginx.conf`)
 
+Esquema `/api/<servicio>/`:
+
 | Ruta | Upstream |
 |------|----------|
-| `/api/(token\|register\|logout\|auth/mfa\|profile-information\|users\|groups)` | `profile-identity-web:8002` |
-| `/api/v1/` | `social-consensus-web:8000` |
-| `/api-se/v2/` | `search-microservice-backend:8002` |
-| `/api-se/` | `search-engine-backend:8001` |
-| `/api-predictiva/` | `predictive-backend:8003` |
+| `/api/identity/` | `profile-identity-web:8002` |
+| `/api/social/` | `social-consensus-web:8000` |
+| `/api/search/` | `search-engine-backend:8001` |
+| `/api/search/v2/` | `search-microservice-backend:8002` |
+| `/api/predictive/` | `predictive-backend:8003` |
+| `/api/rag/` | `centinela-rag:8181` |
 | `/ws/` | `social-consensus-web:8000` (WebSocket) |
 | `/media/` | `social-consensus-web:8000` / `profile-identity-web:8002` |
 
